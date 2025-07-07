@@ -133,7 +133,6 @@ void getPassword(char *password)
             fflush(stdout);
         }
     }
-    printf("\nWindows");
 #else
     struct termios oldt, newt;
     tcgetattr(STDIN_FILENO, &oldt);
@@ -158,7 +157,6 @@ void getPassword(char *password)
         }
     }
     tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-    printf("\nLinux");
 #endif
 
     password[i] = '\0';
